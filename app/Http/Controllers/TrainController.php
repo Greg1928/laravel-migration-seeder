@@ -12,6 +12,7 @@ class TrainController extends Controller
     {
         $mytime = Carbon::now()->format('Y-m-d');
         $trains = Train::where('data_partenza',$mytime)->get();
-        dd($trains);
+        // dd($trains);
+        return view('home', compact('trains'));
     }
 }
