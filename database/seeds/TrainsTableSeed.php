@@ -25,7 +25,8 @@ class TrainsTableSeeder extends Seeder
             $newTrain->in_orario = $bool[rand(0,1)];
             $newTrain->cancellato = $bool[rand(0,1)];
             $newTrain->data_partenza = $faker->dateTimeThisMonth('+30 days');
-
+            $newTrain->orario_partenza = $faker->time();
+            $newTrain->orario_arrivo = $faker->time();
             $newTrain->save();
         }
     }
